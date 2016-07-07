@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Sidney Song"/>
+	<meta name="Copyright" content="Perfect World">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+	<title>DEMO</title>
+	<link rel="stylesheet" type="text/css" href="http://www.mytvgame.com/static/mytvgame/common/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body class="wrap1">
+	<div class="wrapper">
+		<span class="date"></span>
+		<span class="money"></span>
+		<div class="pre">
+			<img class="preview">
+		</div>
+		<p class="txt-desc"></p>
+		<div class="oper">
+			<div class="btn1 item"></div>
+			<div class="btn2 item"></div>
+			<div class="btn3 item"></div>
+		</div>
+		<div class="pingtai"></div>
+	</div>
+	<script type="text/javascript" src="http://www.mytvgame.com/static/mytvgame/common/js/zepto.min.js"></script>
+	<script type="text/javascript" src="http://www.mytvgame.com/static/mytvgame/common/js/m_fs.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		function nextPoint(stat,even,pt){
+			$.ajax({
+				type: "POST",
+				url: "data/test.json",
+				data: {status:stat,even:even},
+				dataType: "json",
+				success: function(data){
+					if(data.status<0){
+						alert(data.message);
+					}else {
+						resolve(data.point,data.money,stat);
+						if(pt!="undefined")$('.pingtai').append('<span>'+pt+'</span>');
+					}
+				}
+			});
+		}
+		resolve(1,0,0); // 1 关数 2 money 3 事件号
+		function change(){
+			$.ajax({
+				type: "POST",
+				url: "data/test.json",
+				dataType: "json",
+				success: function(data){
+					if(data.status<0){
+						alert(data.message);
+					}else {
+						changeSwitch(data.even);
+					}
+				}
+			});
+		}
+	</script>
+</body>
+</html>

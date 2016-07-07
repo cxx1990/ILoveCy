@@ -1,0 +1,40 @@
+.wrap1 {background: url(../images/bg.jpg);background-size: 100%;}
+.wrap2 {background: url(../images/bg2.jpg);background-size: 100%;}
+.wrapper {height: 5.68rem;position: relative;overflow: hidden;}
+.date,.money {
+	position: absolute;
+	font-size: 0.15rem;
+	color: #facd89;
+	top: 0.14rem;
+	width: 1.0rem;
+	height: 0.3rem;
+	text-align: center;
+	line-height: 0.3rem;
+}
+.date {left: 0.29rem;}
+.money {left: 1.92rem;font-weight: bold;}
+.txt-desc {position: absolute;width: 2.13rem;left: 0.57rem;top: 2.68rem;font-size: 0.13rem;color: #ffffcf;line-height: 0.2rem;}
+.pre {position: absolute;width: 1.18rem;left: 1rem;top: 1.2rem;}
+.pre img {width: 100%;}
+.oper {margin-top: 4rem;overflow: hidden;}
+.btn1 {width: 2.56rem;margin-left: 0.32rem;}
+.btn1 button {width: 1.195rem;height: 0.335rem;background: url(../images/btn_1.png);background-size: 100%;font-weight: bold;font-size: 0.14rem;line-height: 0.335rem;text-align: center;color: #fff9d7;}
+.btn2 {margin-left: 0.28rem;width: 2.7rem;}
+.btn1 button:nth-child(1){float: left;}
+.btn1 button:nth-child(2){float: right;}
+.btn2 button {width: 0.825rem;margin-right: 0.075rem;float: left;margin-bottom: 0.12rem;height: 0.255rem;background: url(../images/btn_2.png);background-size: 100%;line-height: 0.225rem;font-weight: bold;text-align: center;color: #fff9d7;font-size: 0.12rem;}
+.btn3 {margin-left: 0.33rem;width: 2.53rem;}
+.btn3 button {width:100%;height: 0.33rem;background: url(../images/btn_3.png);background-size: 100%;line-height: 0.33rem;font-weight: bold;text-align: center;color: #fff9d7;font-size: 0.14rem;}
+.pingtai {margin-top: 0.16rem;margin-left: 0.32rem;overflow: hidden;}
+.pingtai span {width: 0.8rem;height: 0.2rem;background-color: #8a3902;line-height: 0.2rem;text-align: center;font-size: 0.1rem;color: #dbcf8e;float: left;margin-right: 0.07rem;}
+.zhua {position: absolute;left: 0.145rem;top: 0.98rem;width: 0.54rem;height: 0.68rem;background: url(../images/zhua.png);background-size: 100%;z-index: 300;}
+.list {width: 2.2rem;margin: auto;margin-top: 1.39rem;z-index: 250;height: 3.0rem;overflow-y: auto;}
+.list ul {}
+.list ul li {overflow: hidden;background: url(../images/icon.png) no-repeat center bottom;background-size: 2.55rem;padding-bottom: 0.06rem;}
+.list ul li span {display: block;margin-top: 0.07rem;width: 0.8rem;height: 0.18rem;background: #3f140d;font-size: 0.1rem;color: #bd7230;line-height: 0.18rem;text-align: center;margin-bottom: 0.05rem;}
+.list ul li p {font-size: 0.12rem;color: #e9e9b1;line-height: 0.18rem;}
+.list ul li:last-child{background: none;}
+.mask {position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 500;background: rgba(0,0,0,.8);display: none;}
+.popup {position: fixed;top: 0.39rem;left: 50%;width: 2.7rem;height: 2.53rem;margin: 0 0 0 -1.35rem;background: url(../images/popup.png) no-repeat;background-size: 100%;z-index: 800;display: none;}
+
+
