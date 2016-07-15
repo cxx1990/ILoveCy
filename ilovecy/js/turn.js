@@ -1551,7 +1551,8 @@ turnMethods = {
 		/*$("#loading").remove();
 		$(".flipbook-viewport").hide();
 		$("#end").show();*/
-      window.location.href="https://cxx1990.github.io/ILoveCy/ilovecy/love.html";
+     
+	  window.location.href=window.location.href.split('?')[0]+ "?t="+(new Date()).getTime();
     }
   },
 
