@@ -1,0 +1,36 @@
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+
+}
+
+.cxx{
+	
+		 font-size: 100px;
+		 color: red;
+
+}
+.xuanfu{  
+	position:absolute;
+   	left: 12%;
+    top:5%;	
+    font-size: -webkit-xxx-large;
+     color: #de2664;
+    
+ 
+}  
+.img{  
+	position:absolute;
+   	left: 12%;
+    top:30%;	
+   
+    
+ 
+} 
