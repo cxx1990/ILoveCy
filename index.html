@@ -5,27 +5,61 @@
   <title>我们的故事</title>
   <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+
 </head>
 <body onselectstart="return false;">
+
   <div class="swiper-container">
-    <div class="swiper-wrapper">
-     <div class="wrap swiper-slide" id="wrap0"></div>
-     <div class="wrap swiper-slide" id="wrap1"></div>
+    			<div class="swiper-wrapper">
+				     <div class="wrap swiper-slide" id="wrap0"></div>
+				     <div class="wrap swiper-slide" id="wrap1"></div>
      <!-- <div class="wrap swiper-slide" id="wrap2"></div> -->
       <!-- <div class="wrap swiper-slide" id="wrap3"></div> -->
+   			  </div>
    </div>
- </div>
+
+	<img class="icon_up pt-page-moveIconUp" src="img/icon_up.png" />
+
+<div class="play_music"  onclick="SwitchPlayMusic()">
+			<audio id="my_audio" src="cxx.mp3" autoplay="autoplay" loop="loop" preload="auto"></audio>
+			<img id="img_play_music" class="img_play_music" src="img/play.png" />
+			<img id="img_pause_music" class="img_pause_music hide" src="img/silent.png" />
+		</div>	
+   
  <script src="./js/zepto.min.js"></script>
  <script src="./js/swiper.min.js"></script>
  <script src="./js/data.js"></script>
  <script src="./js/action.js"></script>
+  <script src="./js/music.js"></script>
+
  <script>
   var swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
+     lazyLoading:true,//图片延迟加载
+      lazyLoadingInPrevNext : true,//提前对前一张或后一张做延迟加载
     onSlideChangeEnd:function(swiper){
+
+   
       $('.swiper-slide').empty();
       addPhotos(data[ swiper.activeIndex],swiper.activeIndex);
+
+    },
+    onTouchEnd:function(){  
+      var curIndex=swiper.activeIndex;//当前显示滑块的索引
+      var slides=swiper.slides.length;//获得所有的滑块
+
+      
+
+    if(curIndex>=slides-1&&swiper.translate+((document.body.clientHeight)*(slides-1)+30)<0){
+    	
+
+	   location.href ="clock.html";
+ 
     }
+ 
+  }
+
   });
 </script>
 </body>

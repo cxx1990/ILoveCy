@@ -45,7 +45,7 @@ body{
     -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red,endcolorstr=blue,gradientType=0);/*IE8*/  
     background:red; /* 一些不支持背景渐变的浏览器 */  
     background:-moz-linear-gradient(top, red, rgba(0, 0, 255, 0.5));  
-    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ff0000), to(rgba(0, 0, 255, 0.5)));  
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(rgba(150, 41, 41, 0.9)), to(rgba(0, 0, 255, 0.48)));  
     background:-o-linear-gradient(top, red, rgba(0, 0, 255, 0.5)); 
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
@@ -254,5 +254,40 @@ body{
   left: 50%;
 }
 
+.icon_up{
+	     height: auto;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    margin-left: -25px;
+    z-index: 999;
+}
+.pt-page-moveIconUp {
+	-webkit-animation: moveIconUp ease 1.5s both infinite;
+	animation: moveIconUp ease 1.5s both infinite;
+}
 
 
+
+@-webkit-keyframes moveIconUp {
+	0% { -webkit-transform: translateY(100%); opacity:0;}
+	50% { -webkit-transform: translateY(0%); opacity:1;}
+	100% { -webkit-transform: translateY(-100%); opacity:0;}
+}
+@keyframes moveIconUp {
+	0% { -webkit-transform: translateY(100%); transform: translateY(100%); opacity:0;}
+	50% { -webkit-transform: translateY(0%); transform: translateY(0%); opacity:1;}
+	100% { -webkit-transform: translateY(-100%); transform: translateY(-100%); opacity:0;}
+}
+
+
+.play_music,.img_play_music,.img_pause_music{ 
+    width: 50px;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    z-index: 999;
+}
+
+.hide{display: none;}

@@ -22,7 +22,7 @@ body{
    	left: 12%;
     top:5%;	
     font-size: -webkit-xxx-large;
-     color: #de2664;
+    font-family:"Times New Roman",Times,serif;
     
  
 }  
@@ -34,3 +34,24 @@ body{
     
  
 } 
+.button-raised.button-caution {
+background: #069;
+}
+
+.button {
+	   position: absolute;
+    right: 5%;
+    top: 7%;
+    color: #fff;
+    background-color: #EEE;
+    border-color: #EEE;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    padding: 5px 40px;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    
+}
