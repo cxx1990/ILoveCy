@@ -72,7 +72,7 @@ function preImage(url,callback){
 
 function getCurrentShowTimeSeconds() {
     var curTime = new Date();
-    var ret = endTime.getTime() - curTime.getTime();
+    var ret = curTime.getTime()-endTime.getTime();
 
     var day =parseInt(ret/(1000*60*60*24));
 
